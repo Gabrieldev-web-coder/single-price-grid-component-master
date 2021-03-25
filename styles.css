@@ -130,4 +130,32 @@ body {
     border-radius: 0px 0px 5px 0px;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .SPG .SPG__section-comunity {
+    padding: 2rem;
+  }
+  .SPG .SPG__section-whyus {
+    padding: 2rem;
+  }
+  .SPG .SPG__section-Monthly {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .SPG {
+    -ms-grid-columns: 363px;
+        grid-template-columns: 363px;
+  }
+  .SPG .SPG__section-comunity {
+    width: 663px;
+  }
+  .SPG .SPG__section-Monthly {
+    width: 300px;
+  }
+  .SPG .SPG__section-whyus {
+    width: 300px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
