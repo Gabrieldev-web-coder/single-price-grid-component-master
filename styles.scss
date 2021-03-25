@@ -1,0 +1,75 @@
+$primary-colors:hsl(179, 62%, 43%),hsl(71, 73%, 54%),hsl(179, 62%, 46%);
+$neutral-colors:hsl(204, 43%, 93%),hsl(218, 22%, 67%);
+$font-family:'Karla', sans-serif;
+$font-weights:400, 700;
+$body-size:16px;
+
+body{
+    font-size: $body-size;
+    font-family: $font-family;
+    background-color: nth($neutral-colors,1);
+}
+
+.SPG{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1.5rem;
+    line-height: 1.8rem;
+    
+    .SPG__section-comunity{
+        border-radius:5px 5px 0px 0px;
+        background-color: white;
+        padding: 1.3rem;
+        .SPG__section-comunity-h2{color:nth($primary-colors,1);}
+        .SPG__section-comunity-h3{color:nth($primary-colors,2 );}
+        .SPG__section-comunity-p{color:nth($neutral-colors,2);}
+    }
+.SPG__section-Monthly{background-color:nth($primary-colors,1);
+     padding: 1rem; border-radius: 0px 0px 2px 2px;
+     color: white;
+     .per-month{opacity: .7;}
+     .price{font-weight: 700; font-size: 2rem;}
+     .SPG__section-Monthly-p{opacity:.8;}
+     .SPG__section-Monthly-button{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         box-shadow: -1px 9px 26px -5px rgba(0,0,0,0.27);
+         padding: .9rem 0rem .9rem 0rem;
+         margin: 1.5rem 0rem .5rem 0rem;
+         border-radius: 10px;
+         background-color: nth($primary-colors,2);
+     }
+    }}
+
+.SPG__section-whyus{background-color:nth($primary-colors,3);
+     padding: 1rem; border-radius: 0px 0px 5px 5px;
+     color: white;
+     .SPG__section-whyus-p{padding-right: 18%; opacity: .8;}}
+
+@media screen and (min-width:575px){
+    .SPG{
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+        "comu comu"
+        "mont whyu";
+
+        .SPG__section-comunity{grid-area:comu;}
+        .SPG__section-Monthly{grid-area:mont;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+
+        .SPG__section-Monthly-p{margin: 0;}
+        }
+        .SPG__section-whyus{grid-area:whyu; border-radius: 0px 0px 5px 0px;}
+    }
+}
+
+@media screen and (min-width:992px){
+
+}
